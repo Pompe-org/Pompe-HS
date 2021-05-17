@@ -11,30 +11,31 @@ This repo contains our implementation of Pompe on top of HotStuff. Please refer 
 ## Build and Run
 ### Build and run on local machine
 
-We assume that you use a Linux machine, your username is `user1` and the machine name is `driver`, so the `user1@driver:` below indicates your shell prompt. 
+My Linux username is `yunhao` and machine name is `driver`, so the `yunhao@driver:` below indicates my shell prompt. 
+Replace the `yunhao` and `driver` below with your own username and machine name.
 
 
 ```shell
 # Feel free to change the /home/yunhao below to any other directory
-user1@driver: export POMPE_HOME=/home/yunhao/Pompe-HS
-user1@driver: cd /home/yunhao/
-user1@driver: git clone --recursive git@github.com:Pompe-org/Pompe-HS.git
+yunhao@driver: export POMPE_HOME=/home/yunhao/Pompe-HS
+yunhao@driver: cd /home/yunhao/
+yunhao@driver: git clone --recursive git@github.com:Pompe-org/Pompe-HS.git
 
 # Install dependencies
-user1@driver: cd $POMPE_HOME
-user1@driver: ./install_deps.sh
+yunhao@driver: cd $POMPE_HOME
+yunhao@driver: ./install_deps.sh
 
 # Build Pompe
-user1@driver: cd $POMPE_HOME/libhotstuff
-user1@driver: ./build.sh
+yunhao@driver: cd $POMPE_HOME/libhotstuff
+yunhao@driver: ./build.sh
 
 # Run 4 Pompe servers
-user1@driver: cd $POMPE_HOME/experiments/pompe
-user1@driver: ./run_server.sh yunhao local
+yunhao@driver: cd $POMPE_HOME/experiments/pompe
+yunhao@driver: ./run_server.sh yunhao local
 
 # Run 4 Pompe clients for a 30 second experiment
-user1@driver: cd $POMPE_HOME/experiments/pompe
-user1@driver: ./run_client.sh yunhao 4 30 local
+yunhao@driver: cd $POMPE_HOME/experiments/pompe
+yunhao@driver: ./run_client.sh yunhao 4 30 local
 # output will look like:
 ...
 client write to order log file /home/yunhao/Pompe-HS/experiments/pompe//log/client0.order.log, 58342 entries
@@ -44,7 +45,7 @@ client write to exec log file /home/yunhao/Pompe-HS/experiments/pompe//log/clien
 # and the consensus phase of 57233 commands
 
 # Kill the Pompe servers and clients
-user1@driver: ./kill.sh yunhao local
+yunhao@driver: ./kill.sh yunhao local
 ```
 
 ### generate configuration files
@@ -63,17 +64,17 @@ The Python script `$POMPE_HOME/libhotstuff/scripts/gen_conf.py` generates the co
 Then generate your configuration files and replace the old ones.
 
 ```shell
-user1@driver: cd $POMPE_HOME/libhotstuff
-user1@driver: python scripts/gen_conf.py
+yunhao@driver: cd $POMPE_HOME/libhotstuff
+yunhao@driver: python scripts/gen_conf.py
 
 # the configuration files are generated in `./conf-gen` directory. 
-user1@driver: cp ./conf-gen/* $POMPE_HOME/experiments/pompe/conf-distributed
+yunhao@driver: cp ./conf-gen/* $POMPE_HOME/experiments/pompe/conf-distributed
 
 # modify the client and server machine IPs
-user1@driver: vim $POMPE_HOME/experiments/pompe/conf-distributed/client.hosts
-user1@driver: vim $POMPE_HOME/experiments/pompe/conf-distributed/server.hosts
+yunhao@driver: vim $POMPE_HOME/experiments/pompe/conf-distributed/client.hosts
+yunhao@driver: vim $POMPE_HOME/experiments/pompe/conf-distributed/server.hosts
 # put all client and server IPs into the file below for deployment
-user1@driver: vim $POMPE_HOME/hosts
+yunhao@driver: vim $POMPE_HOME/hosts
 ```
 
 Now you are ready to run Pompe in your own distributed environment.
