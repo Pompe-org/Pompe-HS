@@ -40,7 +40,7 @@ client write to exec log file /home/yunhao/Pompe-HS/experiments/pompe//log/clien
 # and the consensus phase of 57233 commands
 ```
 
-### Generate configuration files
+### Generate configurations for distributed cluster
 
 The Python script `$POMPE_HOME/libhotstuff/scripts/gen_conf.py` generates the configuration files. First, modify the IP addresses of the server nodes according to your experiment environment.
 
@@ -70,7 +70,7 @@ yunhao@driver: vim $POMPE_HOME/all.hosts
 
 Now you are ready to run Pompe in a distributed cluster.
 
-### Build and run on a distributed cluster
+### Build and run on distributed cluster
 
 First, you need to install dependencies on all machines in the cluster.
 
