@@ -76,6 +76,40 @@ yunhao@driver: vim $POMPE_HOME/experiments/pompe/conf-distributed/server.hosts
 yunhao@driver: vim $POMPE_HOME/all.hosts
 ```
 
-Now you are ready to run Pompe in your own distributed environment.
+Now you are ready to run Pompe in a distributed cluster.
+
+### Build and run on a distributed cluster
+
+First, you need to install dependencies on all machines in the cluster.
+
+
+```shell
+# run install_deps.sh on all machines in the cluster
+yunhao@{machine_name}: $POMPE_HOME/install_deps.sh
+```
+
+Then, you can deploy and run distributed experiments from your driver machine.
+We assume that Pompe has been built successfully on the driver machine
+Make sure that driver can ssh directly to all machines in the cluster (see ssh-copy-id).
+
+```shell
+# Deploy Pompe
+yunhao@driver: cd $POMPE_HOME
+yunhao@driver: ./deploy.sh yunhao
+
+# Run servers
+yunhao@driver: cd $POMPE_HOME/experiments/pompe
+yunhao@driver: ./run_server.sh yunhao distributed
+
+# Run clients
+yunhao@driver: cd $POMPE_HOME/experiments/pompe
+yunhao@driver: ./run_client.sh yunhao 4 30 distributed
+
+# Collect the experiment data
+yunhao@driver: cd $POMPE_HOME/experiments/pompe
+yunhao@driver: ./data.sh yunhao distributed
+```
+
+
 
 > :warning: **[WARNING]** Revision in progress, expected to finish revision soon.
