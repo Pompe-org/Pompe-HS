@@ -102,3 +102,7 @@ yunhao@driver: ./run_client.sh yunhao 4 30 distributed
 yunhao@driver: ./data.sh yunhao distributed
 # experiment data collected to $POMPE_HOME/experiments/pompe/data
 ```
+
+## Validate the Evaluation Claims
+
+The [Evaluation.md](https://github.com/Pompe-org/Pompe-HS/blob/master/Evaluation.md) in this repo describes how to validate the 4 evaluation claims in our OSDI paper.
