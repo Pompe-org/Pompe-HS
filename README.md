@@ -1,6 +1,6 @@
 # Pompe-Hotstuff
 
-This repo contains our implementation of Pompe on top of HotStuff. Please refer to our OSDI'20 paper and contact Yunhao Zhang(yz2327@cornell.edu) for questions about this repo.
+This repo contains our implementation of Pompe on top of HotStuff. Please refer to our OSDI'20 paper and contact Yunhao Zhang (yz2327@cornell.edu) for questions about this repo.
 
 ## Table of Contents
 
@@ -68,11 +68,11 @@ yunhao@driver: cd $POMPE_HOME/libhotstuff
 yunhao@driver: python scripts/gen_conf.py
 yunhao@driver: cp ./conf-gen/* $POMPE_HOME/experiments/pompe/conf-distributed/
 
-# modify the client and server machine IPs
+# update the client and server IPs
 yunhao@driver: vim $POMPE_HOME/experiments/pompe/conf-distributed/client.hosts
 yunhao@driver: vim $POMPE_HOME/experiments/pompe/conf-distributed/server.hosts
 
-# put all client and server IPs into the file below for deployment
+# put all client and server IPs into the file below
 yunhao@driver: vim $POMPE_HOME/all.hosts
 ```
 
@@ -101,7 +101,7 @@ yunhao@driver: ./deploy.sh yunhao
 yunhao@driver: cd $POMPE_HOME/experiments/pompe
 yunhao@driver: ./run_server.sh yunhao distributed
 
-# Run Pompe clients
+# Run 4 Pompe clients for a 30 second experiment
 yunhao@driver: cd $POMPE_HOME/experiments/pompe
 yunhao@driver: ./run_client.sh yunhao 4 30 distributed
 
@@ -114,4 +114,4 @@ yunhao@driver: ./data.sh yunhao distributed
 
 
 
-> :warning: **[WARNING]** Revision in progress, expected to finish revision soon.
+> :warning: **[WARNING]** Revision in progress, expected to finish soon.
