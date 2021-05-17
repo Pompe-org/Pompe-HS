@@ -1,12 +1,7 @@
 # Pompe-Hotstuff
 
-This repo contains our implementation of Pompe on top of HotStuff. Please refer to our OSDI'20 paper and contact Yunhao Zhang (yz2327@cornell.edu) for questions about this repo.
+This repo contains our implementation of Pompe on top of HotStuff. Please refer to our [OSDI'20 paper](https://www.usenix.org/conference/osdi20/presentation/zhang-yunhao) and contact Yunhao Zhang (yz2327@cornell.edu) for questions about this repo.
 
-## Table of Contents
-
-* [Build and Run](https://github.com/Pompe-org/Pompe-HS/blob/master/README.md#build-and-run)
-* Validate the Claims in Evaluation
-* Troubleshooting
 
 ## Build and Run
 ### Build and run on local machine
@@ -107,7 +102,3 @@ yunhao@driver: ./run_client.sh yunhao 4 30 distributed
 yunhao@driver: ./data.sh yunhao distributed
 # experiment data collected to $POMPE_HOME/experiments/pompe/data
 ```
-
-
-
-> :warning: **[WARNING]** Revision in progress, expected to finish soon.
