@@ -60,11 +60,11 @@ yunhao@driver: cd $POMPE_HOME/libhotstuff
 yunhao@driver: python scripts/gen_conf.py
 yunhao@driver: cp ./conf-gen/* $POMPE_HOME/experiments/pompe/conf-distributed/
 
-# update the client and server IPs
+# update the client and server IP/hostname
 yunhao@driver: vim $POMPE_HOME/experiments/pompe/conf-distributed/client.hosts
 yunhao@driver: vim $POMPE_HOME/experiments/pompe/conf-distributed/server.hosts
 
-# put all client and server IPs into the file below
+# put all client and server IP/hostname into the file below
 yunhao@driver: vim $POMPE_HOME/all.hosts
 ```
 
@@ -82,7 +82,7 @@ yunhao@{machine_name}: $POMPE_HOME/install_deps.sh
 ```
 
 Then, you can deploy and run distributed experiments from your driver machine.
-We assume that Pompe has been built successfully on the driver machine
+We assume that Pompe has been built successfully on the driver machine.
 Make sure that driver can ssh directly to all machines in the cluster (see ssh-copy-id).
 
 ```shell
