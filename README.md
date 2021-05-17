@@ -44,7 +44,7 @@ client write to exec log file /home/yunhao/Pompe-HS/experiments/pompe//log/clien
 # the ordering phase of 58342 commands
 # and the consensus phase of 57233 commands
 
-# Kill the Pompe servers and clients
+# Kill Pompe servers and clients
 yunhao@driver: ./kill.sh yunhao local
 ```
 
@@ -97,16 +97,18 @@ Make sure that driver can ssh directly to all machines in the cluster (see ssh-c
 yunhao@driver: cd $POMPE_HOME
 yunhao@driver: ./deploy.sh yunhao
 
-# Run servers
+# Run Pompe servers
 yunhao@driver: cd $POMPE_HOME/experiments/pompe
 yunhao@driver: ./run_server.sh yunhao distributed
 
-# Run clients
+# Run Pompe clients
 yunhao@driver: cd $POMPE_HOME/experiments/pompe
 yunhao@driver: ./run_client.sh yunhao 4 30 distributed
 
+# Kill Pompe servers and clients
+yunhao@driver: ./kill.sh yunhao distributed
+
 # Collect the experiment data
-yunhao@driver: cd $POMPE_HOME/experiments/pompe
 yunhao@driver: ./data.sh yunhao distributed
 ```
 
