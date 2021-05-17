@@ -48,7 +48,7 @@ client write to exec log file /home/yunhao/Pompe-HS/experiments/pompe//log/clien
 yunhao@driver: ./kill.sh yunhao local
 ```
 
-### generate configuration files
+### Generate configuration files
 
 The Python script `$POMPE_HOME/libhotstuff/scripts/gen_conf.py` generates the configuration files. First, modify the IP addresses of the server nodes according to your experiment environment.
 
@@ -66,15 +66,14 @@ Then generate your configuration files and replace the old ones.
 ```shell
 yunhao@driver: cd $POMPE_HOME/libhotstuff
 yunhao@driver: python scripts/gen_conf.py
-
-# the configuration files are generated in `./conf-gen` directory. 
-yunhao@driver: cp ./conf-gen/* $POMPE_HOME/experiments/pompe/conf-distributed
+yunhao@driver: cp ./conf-gen/* $POMPE_HOME/experiments/pompe/conf-distributed/
 
 # modify the client and server machine IPs
 yunhao@driver: vim $POMPE_HOME/experiments/pompe/conf-distributed/client.hosts
 yunhao@driver: vim $POMPE_HOME/experiments/pompe/conf-distributed/server.hosts
+
 # put all client and server IPs into the file below for deployment
-yunhao@driver: vim $POMPE_HOME/hosts
+yunhao@driver: vim $POMPE_HOME/all.hosts
 ```
 
 Now you are ready to run Pompe in your own distributed environment.
