@@ -85,6 +85,7 @@ First, you need to install dependencies on all machines in the cluster.
 
 ```shell
 # run install_deps.sh on all machines in the cluster
+yunhao@{machine_name}: export POMPE_HOME=/home/yunhao/Pompe-HS
 yunhao@{machine_name}: $POMPE_HOME/install_deps.sh
 ```
 
