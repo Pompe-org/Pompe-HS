@@ -4,7 +4,7 @@ This repo contains our implementation of Pompe on top of HotStuff. Please refer 
 
 ## Table of Contents
 
-* Build and Run
+* [Build and Run](https://github.com/Pompe-org/Pompe-HS/blob/master/README.md#build-and-run)
 * Validate the Claims in Evaluation
 * Troubleshooting
 
