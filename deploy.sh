@@ -8,7 +8,7 @@ else
     rm ./deploy/*/log/*
     rm ./deploy/*/data/*
     
-    cat hosts | while read machine
+    cat all.hosts | while read machine
     do
         echo "deploy code on machine ${machine} at ${POMPE_HOME}"
 
