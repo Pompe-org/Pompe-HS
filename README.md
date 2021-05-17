@@ -86,7 +86,7 @@ We assume that Pompe has been built successfully on the driver machine
 Make sure that driver can ssh directly to all machines in the cluster (see ssh-copy-id).
 
 ```shell
-# Deploy Pompe
+# Deploy Pompe to all.hosts
 yunhao@driver: cd $POMPE_HOME
 yunhao@driver: ./deploy.sh yunhao
 
