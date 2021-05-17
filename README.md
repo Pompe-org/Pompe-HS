@@ -43,9 +43,6 @@ client write to exec log file /home/yunhao/Pompe-HS/experiments/pompe//log/clien
 # which means that, in 30 seconds, the client has processed 
 # the ordering phase of 58342 commands
 # and the consensus phase of 57233 commands
-
-# Kill Pompe servers and clients
-yunhao@driver: ./kill.sh yunhao local
 ```
 
 ### Generate configuration files
@@ -106,11 +103,9 @@ yunhao@driver: ./run_server.sh yunhao distributed
 yunhao@driver: cd $POMPE_HOME/experiments/pompe
 yunhao@driver: ./run_client.sh yunhao 4 30 distributed
 
-# Kill Pompe servers and clients
-yunhao@driver: ./kill.sh yunhao distributed
-
 # Collect the experiment data
 yunhao@driver: ./data.sh yunhao distributed
+# experiment data collected to $POMPE_HOME/experiments/pompe/data
 ```
 
 
