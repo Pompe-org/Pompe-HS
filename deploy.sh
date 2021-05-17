@@ -5,16 +5,19 @@ then
 
 else
     # remove old log and data
-    rm ./deploy/*/log/*
-    rm ./deploy/*/data/*
+    rm ./experiments/*/log/*
+    rm ./experiments/*/data/*
     
     cat all.hosts | while read machine
     do
         echo "deploy code on machine ${machine} at ${POMPE_HOME}"
 
+	# Pompe binary executable
         rsync -rtuv ./libhotstuff/examples $1@${machine}:${POMPE_HOME}/libhotstuff/ 
-
-	    rsync -rtuv ./libhotstuff/deploy $1@${machine}:${POMPE_HOME}/libhotstuff/
+	# Pompe configuration files
+        rsync -rtuv ./experiments $1@${machine}:${POMPE_HOME}/
+	# Pompe dependency installation
+	scp ./install_deps.sh $1:${machine}:${POMPE_HOME}/
 
     done
 
