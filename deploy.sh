@@ -12,12 +12,12 @@ else
     do
         echo "deploy code on machine ${machine} at ${POMPE_HOME}"
 
-	# Pompe binary executable
-        rsync -rtuv ./libhotstuff/examples $1@${machine}:${POMPE_HOME}/libhotstuff/ --exclude CMakeFiles
 	# Pompe configuration files
         rsync -rtuv ./experiments $1@${machine}:${POMPE_HOME}/
+	# Pompe binary executable
+        rsync -rtuv ./libhotstuff/examples $1@${machine}:${POMPE_HOME}/libhotstuff/ --exclude CMakeFiles
 	# Pompe dependency installation
-	scp ./install_deps.sh $1@${machine}:${POMPE_HOME}/
+	    scp ./install_deps.sh $1@${machine}:${POMPE_HOME}/
 
     done
 
