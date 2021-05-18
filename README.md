@@ -1,6 +1,6 @@
 # Pompe-Hotstuff
 
-This repo contains our implementation of Pompe on top of HotStuff. Please refer to our [OSDI'20 paper](https://www.usenix.org/conference/osdi20/presentation/zhang-yunhao) and contact Yunhao Zhang (yz2327@cornell.edu) for questions about this repo.
+This repo contains our implementation of Pompe on top of HotStuff. Please refer to our [OSDI'20 paper](https://www.usenix.org/conference/osdi20/presentation/zhang-yunhao) and contact Yunhao Zhang (yz2327@cornell.edu) for any questions.
 
 
 ## Build and Run
