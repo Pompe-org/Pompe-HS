@@ -17,7 +17,7 @@ else
 	# Pompe binary executable
         rsync -rtuv ./libhotstuff/examples $1@${machine}:${POMPE_HOME}/libhotstuff/ --exclude CMakeFiles
 	# Pompe dependency installation
-	    scp ./install_deps.sh $1@${machine}:${POMPE_HOME}/
+	    rsync -rtuv ./install_deps.sh $1@${machine}:${POMPE_HOME}/
 
     done
 
