@@ -5,8 +5,8 @@ then
 
 else
     # remove old log and data
-    rm ./experiments/*/log/*
-    rm ./experiments/*/data/*
+    rm ./experiments/*/log/*.log
+    rm ./experiments/*/data/*.log
     
     cat all.hosts | while read machine
     do
