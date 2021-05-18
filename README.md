@@ -111,3 +111,8 @@ yunhao@driver: python process.py exec pompe/data
 ## Evaluation and Troubleshooting
 
 The file [Evaluation.md](https://github.com/Pompe-org/Pompe-HS/blob/master/Evaluation.md) in this repo describes how to validate the 4 evaluation claims in our OSDI paper as well as fixes to common issues.
+
+## Acknowledgements
+
+I wish to thank Ted Yin, the creater of `libhotstuff` and my good friend, for his generous help and discussions. 
+I also wish to thank the anonymous OSDI artifct reviewers for their valuable feedback and dedicated efforts of reproducing our evaluation results. 
