@@ -1,6 +1,6 @@
 # Pompe-Hotstuff
 
-This repo contains our implementation of Pompe on top of HotStuff. Please refer to our [OSDI'20 paper](https://www.usenix.org/conference/osdi20/presentation/zhang-yunhao) and contact Yunhao Zhang (yz2327@cornell.edu) for questions about this repo.
+This repo contains our implementation of Pompe on top of HotStuff. Please refer to our [OSDI'20 paper](https://www.usenix.org/conference/osdi20/presentation/zhang-yunhao) and contact Yunhao Zhang (yz2327@cornell.edu) for any questions.
 
 
 ## Build and Run
@@ -108,6 +108,6 @@ yunhao@driver: python process.py order pompe/data
 yunhao@driver: python process.py exec pompe/data
 ```
 
-## Validate the Evaluation Claims
+## Evaluation and Troubleshooting
 
-The [Evaluation.md](https://github.com/Pompe-org/Pompe-HS/blob/master/Evaluation.md) in this repo describes how to validate the 4 evaluation claims in our OSDI paper.
+The file [Evaluation.md](https://github.com/Pompe-org/Pompe-HS/blob/master/Evaluation.md) in this repo describes how to validate the 4 evaluation claims in our OSDI paper as well as fixes to common issues.
