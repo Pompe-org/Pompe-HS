@@ -33,11 +33,11 @@ yunhao@driver: cd $POMPE_HOME/experiments/pompe
 yunhao@driver: ./run_client.sh yunhao 4 30 local
 # output will look like:
 ...
-client write to order log file /home/yunhao/Pompe-HS/experiments/pompe//log/client0.order.log, 58342 entries
-client write to exec log file /home/yunhao/Pompe-HS/experiments/pompe//log/client0.exec.log, 57233 entries
+client write to order log file /users/Yunhao/Pompe-HS/experiments/pompe//log/client0.order.log, 81338 entries
+client write to exec log file /users/Yunhao/Pompe-HS/experiments/pompe//log/client0.exec.log, 81276 entries
 # which means that, in 30 seconds, the client has processed 
-# the ordering phase of 58342 commands
-# and the consensus phase of 57233 commands
+# the ordering phase of 81338 commands
+# and the consensus phase of 81276 commands
 ```
 
 ### Generate configurations for distributed cluster
