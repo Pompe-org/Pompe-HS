@@ -108,6 +108,6 @@ yunhao@driver: python process.py order pompe/data
 yunhao@driver: python process.py exec pompe/data
 ```
 
-## Validate the Evaluation Claims
+## Evaluation and Troubleshooting
 
-The [Evaluation.md](https://github.com/Pompe-org/Pompe-HS/blob/master/Evaluation.md) in this repo describes how to validate the 4 evaluation claims in our OSDI paper.
+The file [Evaluation.md](https://github.com/Pompe-org/Pompe-HS/blob/master/Evaluation.md) in this repo describes how to validate the 4 evaluation claims in our OSDI paper as well as fixes to common issues.
