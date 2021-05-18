@@ -99,8 +99,13 @@ yunhao@driver: cd $POMPE_HOME/experiments/pompe
 yunhao@driver: ./run_client.sh yunhao 4 30 distributed
 
 # Collect the experiment data
+yunhao@driver: cd $POMPE_HOME/experiments/pompe
 yunhao@driver: ./data.sh yunhao distributed
-# experiment data collected to $POMPE_HOME/experiments/pompe/data
+
+# Show aggregated results
+yunhao@driver: cd $POMPE_HOME/experiments
+yunhao@driver: python process.py order pompe/data
+yunhao@driver: python process.py exec pompe/data
 ```
 
 ## Validate the Evaluation Claims
