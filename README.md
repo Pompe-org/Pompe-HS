@@ -42,7 +42,7 @@ client write to exec log file /users/Yunhao/Pompe-HS/experiments/pompe//log/clie
 
 ### Generate configurations for distributed cluster
 
-The Python script `$POMPE_HOME/libhotstuff/scripts/gen_conf.py` generates the configuration files. First, modify the IP addresses of the server nodes according to your experiment environment.
+The Python script `$POMPE_HOME/libhotstuff/scripts/gen_conf.py` generates the configuration files. First, modify the IP addresses (or hostnames) of the server nodes according to your cluster environment.
 
 ```python
     # in hotstuff/scripts/gen_conf.py
@@ -81,12 +81,12 @@ yunhao@{machine_name}: export POMPE_HOME=/home/yunhao/Pompe-HS
 yunhao@{machine_name}: $POMPE_HOME/install_deps.sh
 ```
 
-Then, you can deploy and run distributed experiments from your driver machine.
-We assume that Pompe has been built successfully on the driver machine.
-Make sure that driver can ssh directly to all machines in the cluster (see ssh-copy-id).
+Then you can deploy and run distributed experiments from your driver machine.
+We assume that Pompe has been built successfully on the driver machine
+and driver can ssh directly to all machines in the cluster (see ssh-copy-id).
 
 ```shell
-# Deploy Pompe to all.hosts
+# Deploy Pompe from driver to all.hosts
 yunhao@driver: cd $POMPE_HOME
 yunhao@driver: ./deploy.sh yunhao
 
@@ -102,7 +102,7 @@ yunhao@driver: ./run_client.sh yunhao 4 30 distributed
 yunhao@driver: cd $POMPE_HOME/experiments/pompe
 yunhao@driver: ./data.sh yunhao distributed
 
-# Show aggregated results
+# Show aggregated experiment results
 yunhao@driver: cd $POMPE_HOME/experiments
 yunhao@driver: python process.py order pompe/data
 yunhao@driver: python process.py exec pompe/data
