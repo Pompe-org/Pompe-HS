@@ -11,10 +11,10 @@ Replace the `yunhao` and `driver` below with your own username and machine name.
 
 
 ```shell
-# Feel free to change the /home/yunhao below to any other directory
 yunhao@driver: export POMPE_HOME=/home/yunhao/Pompe-HS
 yunhao@driver: cd /home/yunhao/
 yunhao@driver: git clone --recursive git@github.com:Pompe-org/Pompe-HS.git
+# Feel free to change the /home/yunhao above to any other directory
 
 # Install dependencies
 yunhao@driver: cd $POMPE_HOME
