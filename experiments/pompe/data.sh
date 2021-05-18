@@ -9,7 +9,7 @@ then
 else
 
 
-rm -f $base_dir/data/* 2> /dev/null
+rm -f $base_dir/data/*.log 2> /dev/null
 
 cat $base_dir/conf-$2/client.hosts | while read machine
 do
